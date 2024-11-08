@@ -31,44 +31,46 @@ class MyApp extends StatelessWidget {
         iconTheme: IconThemeData(
           color: Colors.grey[600],
         ),
+
+        
         appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xFFBC764A),
           centerTitle: false,
           foregroundColor: Colors.white,
           actionsIconTheme: IconThemeData(color: Colors.white),
         ),
-        /*elevatedButtonTheme: ElevatedButtonThemeData(
+        elevatedButtonTheme: ElevatedButtonThemeData(
           style: ButtonStyle(
-            backgroundColor: WidgetStateColor.resolveWith(
-                    (states) => const Color(0xFFBC764A)),
-            foregroundColor: WidgetStateColor.resolveWith(
-                  (states) => Colors.white,
-            ),
+            //backgroundColor: WidgetStateColor.resolveWith((states) => const Color(0xFFBC764A)),
+            //foregroundColor: WidgetStateColor.resolveWith((states) => Colors.white,
+            backgroundColor: MaterialStateProperty.all(Color(0xFFBC764A)),
+            foregroundColor: MaterialStateProperty.all(Colors.white),
+
           ),
         ),
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: ButtonStyle(
-            foregroundColor: WidgetStateColor.resolveWith(
-                  (states) => const Color(0xFFBC764A),
-            ),
-            side: WidgetStateBorderSide.resolveWith(
-                    (states) => const BorderSide(color: Color(0xFFBC764A))),
+            ///foregroundColor: WidgetStateColor.resolveWith((states) => const Color(0xFFBC764A),),
+            //side: WidgetStateBorderSide.resolveWith((states) => const BorderSide(color: Color(0xFFBC764A))),
+
+            side:  MaterialStateProperty.all( BorderSide(color: Color(0xFFBC764A))),
+            foregroundColor: MaterialStateProperty.all(Color(0xFFBC764A)),
+
           ),
         ),
         textButtonTheme: TextButtonThemeData(
           style: ButtonStyle(
-            foregroundColor: WidgetStateColor.resolveWith(
-                  (states) => const Color(0xFFBC764A),
-            ),
+            //foregroundColor: WidgetStateColor.resolveWith((states) => const Color(0xFFBC764A),),
+             foregroundColor: MaterialStateProperty.all(Color(0xFFBC764A)),
           ),
         ),
         iconButtonTheme: IconButtonThemeData(
           style: ButtonStyle(
-            foregroundColor: WidgetStateColor.resolveWith(
-                  (states) => const Color(0xFFBC764A),
-            ),
+            //foregroundColor: WidgetStateColor.resolveWith((states) => const Color(0xFFBC764A),),
+
+             foregroundColor: MaterialStateProperty.all(Color(0xFFBC764A)),
           ),
-        ),*/
+        ),
         colorScheme: ColorScheme.fromSwatch().copyWith(
           background: const Color(0xFFFDF5EC),
           primary: const Color(0xFFD0996F),
