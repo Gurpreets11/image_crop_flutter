@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
           color: Colors.grey[600],
         ),
 
-        
+
         appBarTheme: const AppBarTheme(
           backgroundColor: Color(0xFFBC764A),
           centerTitle: false,
@@ -245,17 +245,8 @@ class _HomePageState extends State<HomePage> {
                           Text(
                             'Upload an image to start',
                             style: kIsWeb
-                                ? Theme.of(context)
-                                .textTheme
-                                .headlineSmall!
-                                .copyWith(
-                                color: Theme.of(context).highlightColor)
-                                : Theme.of(context)
-                                .textTheme
-                                .bodyMedium!
-                                .copyWith(
-                                color:
-                                Theme.of(context).highlightColor),
+                                ? Theme.of(context).textTheme.headlineSmall!.copyWith(color: Theme.of(context).highlightColor)
+                                : Theme.of(context).textTheme.bodyMedium!.copyWith(color: Theme.of(context).highlightColor),
                           )
                         ],
                       ),
@@ -353,5 +344,7 @@ class CropAspectRatioPresetCustom implements CropAspectRatioPresetData {
   @override
   String get name => '2x3 (customized)';
 }
+
+// Source : https://github.com/hnvn/flutter_image_cropper
 
 
